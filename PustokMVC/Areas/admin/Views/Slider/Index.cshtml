@@ -1,0 +1,51 @@
+﻿
+@model List<Slider>;
+@{
+    int counter = 0;
+}
+<div class="container">
+    <div class="row">
+        <div style="display:flex;justify-content:space-between;align-items:center;align-content:center;margin-top:20px;border:1px solid grey;padding:10px">
+            <h3 style="margin-bottom:0">Sliders</h3>
+            <a class="btn-success" style="padding:10px;align-items:center;border-radius:10px" asp-controller="slider" asp-action="create">Create</a>
+        </div>
+        <table class="table table-striped" style="margin-top:40px;border:1px solid grey">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title1</th>
+                    <th scope="col">Title2</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">RedirectUrl</th>
+                    <th scope="col">RedirectText</th>
+                    <th scope="col">ImageUrl</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var slider in Model)
+                {
+                    counter++;
+                    <tr>
+                        <th scope="row">@counter</th>
+                        <td>@slider.Title1</td>
+                        <td>@slider.Title2</td>
+                        <td>@slider.Desc</td>
+                        <td>@slider.RedirectUrl</td>
+                        <td>@slider.RedirectText</td>
+                        <td>
+                            <img style="width:150px" src="~/uploads/Sliders/@slider.ImageUrl" alt="Alternate Text" />
+                        </td>
+                        <td>
+                            <div style="display:flex;">
+                                <a style="margin-right:10px;color:white" class="btn btn-warning" asp-controller="slider" asp-action="update" asp-route-id="@slider.Id">Update</a>
+                                <a style="color:white" class="btn btn-danger" asp-controller="slider" asp-action="delete" asp-route-id="@slider.Id">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

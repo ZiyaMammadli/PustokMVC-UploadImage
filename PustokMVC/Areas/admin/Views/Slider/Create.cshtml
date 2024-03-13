@@ -1,0 +1,42 @@
+﻿@model Slider
+<div class="container">
+    <form style="margin-top:20px" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Title1</label>
+            <input asp-for="Title1" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="Title1" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Title2</label>
+            <input asp-for="Title2" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="Title2" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Description</label>
+            <input asp-for="Desc" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="Desc" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">RedirectText</label>
+            <input asp-for="RedirectText" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="RedirectText" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">RedirectUrl</label>
+            <input asp-for="RedirectUrl" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="RedirectUrl" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Activate</label>
+            <input asp-for="IsActivated" style="width:30px;height:30px"  aria-describedby="emailHelp">
+            <span asp-validation-for="IsActivated" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">ImageFile</label>
+            <input asp-for="ImageFile"  class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>
