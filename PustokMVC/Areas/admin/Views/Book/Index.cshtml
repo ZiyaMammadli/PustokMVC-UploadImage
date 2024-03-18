@@ -1,0 +1,64 @@
+﻿@model List<Book>;
+@{
+    int counter = 0;
+}
+<div class="container">
+    <div class="row">
+        <div style="display:flex;justify-content:space-between;align-items:center;align-content:center;margin-top:20px;border:1px solid grey;padding:10px">
+            <h3 style="margin-bottom:0">Books</h3>
+            <a class="btn-success" style="padding:10px;align-items:center;border-radius:10px" asp-controller="book" asp-action="create">Create</a>
+        </div>
+        <table class="table table-striped" style="margin-top:40px;border:1px solid grey">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">CostPrice</th>
+                    <th scope="col">SellPrice</th>
+                    <th scope="col">Discount</th>
+                    <th scope="col">StockCount</th>
+                    <th scope="col">ProductCode</th>
+                    <th scope="col">IsFeatured</th>
+                    <th scope="col">IsNew</th>
+                    <th scope="col">MostView</th>
+                    <th scope="col">Images</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    counter++;
+                    <tr>
+                        <th scope="row">@counter</th>
+                        <td>@book.Genre.Name</td>
+                        <td>@book.Author.Name</td>
+                        <td>@book.Name</td>
+                        <td>@book.Desc</td>
+                        <td>@book.CostPrice</td>
+                        <td>@book.SellPrice</td>
+                        <td>@book.Discount</td>
+                        <td>@book.StockCount</td>
+                        <td>@book.ProductCode</td>
+                        <td>@book.IsFeatured</td>
+                        <td>@book.IsNew</td>
+                        <td>@book.MostView</td>
+                        <td>
+                            <img style="width:150px" src="~/uploads/Books/@book.BookImages.Where(bi=>bi.IsCover==true).FirstOrDefault()?.ImageUrl" alt="Alternate Text" />
+                        </td>
+                        <td>
+                            <div style="display:flex;">
+                                <a style="margin-right:10px;color:white" class="btn btn-warning" asp-controller="book" asp-action="update" asp-route-id="@book.Id">Update</a>
+                                <a style="color:white" class="btn btn-danger" asp-controller="book" asp-action="delete" asp-route-id="@book.Id">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

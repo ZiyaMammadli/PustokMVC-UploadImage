@@ -1,0 +1,82 @@
+﻿@model Book
+@{
+    List<Genre> genres = (List <Genre>)ViewData["genres"];
+    List<Author> authors = (List<Author>)ViewData["authors"];
+}
+<div class="container">
+    <form style="margin-top:20px" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input asp-for="Name" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Description</label>
+            <input asp-for="Desc" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="Desc" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">CostPrice</label>
+            <input asp-for="CostPrice" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="CostPrice" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">SellPrice</label>
+            <input asp-for="SellPrice" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="SellPrice" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Discount</label>
+            <input asp-for="Discount" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="Discount" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">StockCount</label>
+            <input asp-for="StockCount" style="width:80px;height:30px" aria-describedby="emailHelp">
+            <span asp-validation-for="StockCount" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">ProductCode</label>
+            <input asp-for="ProductCode" style="width:80px;height:30px" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="ProductCode" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">IsFeatured</label>
+            <input asp-for="IsFeatured" class="form-Check" aria-describedby="emailHelp">
+            <span asp-validation-for="IsFeatured" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">IsNew</label>
+            <input asp-for="IsNew" class="form-Check" aria-describedby="emailHelp">
+            <span asp-validation-for="IsNew" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">MostView</label>
+            <input asp-for="MostView" class="form-Check" aria-describedby="emailHelp">
+            <span asp-validation-for="MostView" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Selections</label>
+            <select asp-for="GenreId" asp-items="@(new SelectList(genres,"Id","Name"))" class="form-select"style="width:200px"></select>
+            <span asp-validation-for="GenreId" class="text-danger"></span>
+            <select asp-for="AuthorId" asp-items="@(new SelectList(authors,"Id","Name"))" class="form-select" style="width:200px"></select>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">CoverImageFile</label>
+            <input asp-for="CoverImageFile" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="CoverImageFile" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">HoverImageFile</label>
+            <input asp-for="HoverImageFile" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="HoverImageFile" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">ImageFiles</label>
+            <input asp-for="ImageFiles" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="ImageFiles" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>

@@ -1,0 +1,11 @@
+﻿@model Author
+<div class="container">
+    <form style="margin-top:20px" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input asp-for="Name" class="form-control" aria-describedby="emailHelp">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>

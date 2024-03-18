@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PustokMVC.Business.Interfaces;
+using PustokMVC.CustomExceptions.Common;
 using PustokMVC.DAL;
 using PustokMVC.Models;
 
@@ -8,20 +10,18 @@ namespace PustokMVC.Areas.admin.Controllers
     [Area("admin")]
     public class SliderController : Controller
     {
-        private readonly PustokDbContext _context;
-        public SliderController(PustokDbContext context)
+        private readonly ISliderService _sliderService;
+        public SliderController(ISliderService sliderService)
         {
-            _context = context;
+            _sliderService = sliderService;
         }
 
         public async Task <IActionResult> Index()
         {
-           List <Slider> Sliders=await _context.Sliders.ToListAsync();
-            return View(Sliders);
+            return View(await _sliderService.GetAllAsync());
         }
         public  IActionResult Create()
         {
-
             return View();
         }
         [HttpPost]
@@ -32,101 +32,69 @@ namespace PustokMVC.Areas.admin.Controllers
             {
                 return View();
             }
-            if(slider.ImageFile.ContentType != "image/jpeg" && slider.ImageFile.ContentType != "image/png")
+            try
             {
-                ModelState.AddModelError("ImageFile", "Please,You enter jpeg or png file");
+               await _sliderService.CreateAsync(slider);
+            }
+            catch (InvalidContentTypeException ex)
+            {
+
+                ModelState.AddModelError(ex.PropertyName, ex.Message);
                 return View();
             }
-            if(slider.ImageFile.Length > 2097152)
+            catch(SizeOfFileException ex)
             {
-                ModelState.AddModelError("ImageFile", "Please,You just can send low measure file from 2 mb!");
-                return View();
+                ModelState.AddModelError(ex.Propertyame, ex.Message);
+                return View();  
             }
-            string fileName=slider.ImageFile.FileName;
-            if (fileName.Length > 64)
-            {
-                fileName = fileName.Substring(fileName.Length-64, 64);
-            }
-            fileName = Guid.NewGuid().ToString() + fileName;
-
-            string path = $"C:\\Users\\user\\source\\repos\\PustokMVC\\PustokMVC\\wwwroot\\Uploads\\Sliders\\{fileName}";
-
-            using(FileStream fileStream=new FileStream(path,FileMode.Create))
-            {
-                slider.ImageFile.CopyTo(fileStream); 
-            }
-
-            slider.CreatedDate = DateTime.UtcNow.AddHours(4);
-            slider.UpdatedDate = DateTime.UtcNow.AddHours(4);
-            slider.ImageUrl = fileName;
-            await _context.Sliders.AddAsync(slider);
-            await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
         public async Task<IActionResult> Update(int id)
         {
-            Slider Slider=await _context.Sliders.FirstOrDefaultAsync(s => s.Id == id);
-            if (Slider == null) throw new NullReferenceException();
+            Slider Slider=await _sliderService.GetByIdAsync(id);
+            if (Slider == null) throw new NotFoundException("This Slider is not found!");
             return View(Slider);  
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult>Update(Slider slider)
         {
-            Slider currentSlider = await _context.Sliders.FirstOrDefaultAsync(s => s.Id == slider.Id);
-            if (currentSlider == null) throw new NullReferenceException();
+            
             if (!ModelState.IsValid)
             {
                 return View();
             }
-            if(slider.ImageFile.Length > 2097152)
+            try
             {
-                ModelState.AddModelError("ImageFile", "Please,You just can send low measure file from 2 mb!");
+                await _sliderService.UpdateAsync(slider);
+            }
+            catch (NotFoundException ex)
+            {
+
+                ModelState.AddModelError("", ex.Message);
                 return View();
             }
-            if (slider.ImageFile.ContentType != "image/jpeg" && slider.ImageFile.ContentType != "image/png")
+            catch (SizeOfFileException ex)
             {
-                ModelState.AddModelError("ImageFile", "Please,You enter only jpeg or png file");
+                ModelState.AddModelError(ex.Propertyame,ex.Message);
                 return View();
             }
-
-            string fileName = slider.ImageFile.FileName;
-            if (fileName.Length > 64)
+            catch(InvalidContentTypeException ex)
             {
-                fileName = fileName.Substring(fileName.Length - 64, 64);
+                ModelState.AddModelError(ex.PropertyName,ex.Message);
+                return View();  
             }
-            fileName = Guid.NewGuid().ToString() + fileName;
-
-            string path = $"C:\\Users\\user\\source\\repos\\PustokMVC\\PustokMVC\\wwwroot\\Uploads\\Sliders\\{fileName}";
-            using(FileStream fileStream=new FileStream(path, FileMode.Create))
+            catch (Exception ex)
             {
-                slider.ImageFile.CopyTo(fileStream);
 
+                ModelState.AddModelError("", ex.Message);
+                return View();
             }
-            string path2= $"C:\\Users\\user\\source\\repos\\PustokMVC\\PustokMVC\\wwwroot\\Uploads\\Sliders\\{currentSlider.ImageUrl}";
-
-                //if (File.Exists(path2))
-                //{
-                //    File.Delete(path2);
-                //}
-            
-            
-            slider.UpdatedDate = DateTime.UtcNow.AddHours(4);
-            currentSlider.ImageUrl=fileName;
-            currentSlider.Title1= slider.Title1;
-            currentSlider.Title2= slider.Title2;
-            currentSlider.Desc=slider.Desc;
-            currentSlider.RedirectText=slider.RedirectText;
-            currentSlider.RedirectUrl=slider.RedirectUrl;
-            await _context.SaveChangesAsync();
             return RedirectToAction("index");
         }
         public async Task <IActionResult> Delete(int id)
         {
-           Slider slider= await _context.Sliders.FirstOrDefaultAsync(s=>s.Id == id);
-            if(slider == null) throw new NullReferenceException();
-            _context.Sliders.Remove(slider);
-            await _context.SaveChangesAsync();   
+           await _sliderService.DeleteAsync(id);
             return RedirectToAction("index");
         }
     }
