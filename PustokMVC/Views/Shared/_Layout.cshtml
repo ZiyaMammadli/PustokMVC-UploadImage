@@ -323,7 +323,11 @@
                                 <div class="cart-widget">
                                     <div class="login-block">
                                         <a href="login-register.html" class="font-weight-bold">Login</a> <br>
-                                        <span>or</span><a href="login-register.html">Register</a>
+                                        <span>or</span><a href="login-register.html">Register</a> <br>
+                                        <form method="post" class="nav-item lh-1 me-3">
+                                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                            <button type="submit" asp-controller="account" asp-action="logout">Logout</button>
+                                        </form>
                                     </div>
                                     <div class="cart-block">
                                         <div class="cart-total">
@@ -835,7 +839,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="menu-item">
+                                <li  class="menu-item">
                                     <a href="contact.html">Contact</a>
                                 </li>
                             </ul>

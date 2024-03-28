@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PustokMVC.Business.Interfaces;
 using PustokMVC.CustomExceptions.Common;
 using PustokMVC.Models;
@@ -6,6 +7,7 @@ using PustokMVC.Models;
 namespace PustokMVC.Areas.admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles ="Admin,SuperAdmin")]
     public class AuthorController : Controller
     {
         private readonly IAuthorService _authorService;
@@ -23,6 +25,7 @@ namespace PustokMVC.Areas.admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles ="Admin,SuperAdmin")]
         public async Task <IActionResult> Create(Author author)
         {
             if (!ModelState.IsValid)
@@ -52,6 +55,7 @@ namespace PustokMVC.Areas.admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task <IActionResult>Update(Author author)
         {
             if (!ModelState.IsValid)
@@ -80,6 +84,7 @@ namespace PustokMVC.Areas.admin.Controllers
             }
             return RedirectToAction("Index");
         }
+        [Authorize(Roles = "SuperAdmin")]
         public async Task <IActionResult> Delete(int id)
         {
             try

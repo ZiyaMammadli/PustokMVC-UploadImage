@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PustokMVC.Business.Interfaces;
 using PustokMVC.CustomExceptions.Common;
@@ -8,6 +9,7 @@ using PustokMVC.Models;
 namespace PustokMVC.Areas.admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class BookController : Controller
     {
         private readonly IBookService _bookService;
@@ -32,6 +34,7 @@ namespace PustokMVC.Areas.admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task <IActionResult> Create(Book book)
         {
             ViewData["genres"] = await _genreService.GetAllAsync();
@@ -67,10 +70,21 @@ namespace PustokMVC.Areas.admin.Controllers
         {
             ViewData["genres"] = await _genreService.GetAllAsync();
             ViewData["authors"] = await _authorService.GetAllAsync();
-            return View(await _bookService.GetByIdAsync(id));
+            Book? book = null;
+            try
+            {
+                book = await _bookService.GetSingleAsync(b => b.Id == id, "Author", "Genre","BookImages");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return View(book);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task <IActionResult> Update(Book book)
         {
             ViewData["genres"] = await _genreService.GetAllAsync();
@@ -111,6 +125,7 @@ namespace PustokMVC.Areas.admin.Controllers
 
             return RedirectToAction("index");
         }
+        [Authorize(Roles = "SuperAdmin")]
         public async Task <IActionResult>Delete(int id)
         {
             await _bookService.DeleteAsync(id);

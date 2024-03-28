@@ -139,31 +139,31 @@ namespace PustokMVC.Business.Implementations
             if (deletedBook.CoverImageFile is not null)
             {
               
-                List<BookImage> bookImage1 = await _context.BookImages.Where(bi => bi.IsCover == true).Where(bi => bi.BookId == deletedBook.Id).ToListAsync();
+                BookImage? coverImage = await _context.BookImages.Where(bi => bi.IsCover == true).Where(bi => bi.BookId == deletedBook.Id).FirstOrDefaultAsync();
 
-                foreach (var bookImage in bookImage1)
-                {
-                    string path2 = Path.Combine(_env.WebRootPath, "uploads/sliders", bookImage.ImageUrl);
+                
+                
+                    string path2 = Path.Combine(_env.WebRootPath, "uploads/sliders", coverImage.ImageUrl);
                     if (File.Exists(path2))
                     {
                         File.Delete(path2);
                     }
-                    _context.BookImages.Remove(bookImage);
-                }               
+                    _context.BookImages.Remove(coverImage);
+                              
        
             }
             if(deletedBook.HoverImageFile is not null) 
             {
-                List<BookImage> bookImage1 = await _context.BookImages.Where(bi => bi.IsCover == false).Where(bi => bi.BookId == deletedBook.Id).ToListAsync();
-                foreach (var bookImage in bookImage1)
-                {
-                    string path2 = Path.Combine(_env.WebRootPath, "uploads/sliders", bookImage.ImageUrl);
+                BookImage? hoverImage = await _context.BookImages.Where(bi => bi.IsCover == false).Where(bi => bi.BookId == deletedBook.Id).FirstOrDefaultAsync();
+                
+                
+                    string path2 = Path.Combine(_env.WebRootPath, "uploads/sliders", hoverImage.ImageUrl);
                     if (File.Exists(path2))
                     {
                         File.Delete(path2);
                     }
-                    _context.BookImages.Remove(bookImage);
-                }
+                    _context.BookImages.Remove(hoverImage);
+                
             }
             if(deletedBook.ImageFiles is not null)
             {
@@ -204,10 +204,11 @@ namespace PustokMVC.Business.Implementations
             return book;
         }
 
-        public async Task<Book> GetSingleAsync(Expression<Func<Book, bool>>? expression = null)
+        public async Task<Book> GetSingleAsync(Expression<Func<Book, bool>>? expression = null, params string[] includes)
         {
             var query = _context.Books.AsQueryable();
-            if(expression != null)
+            query = _GetInclude(query, includes);
+            if (expression is not null)
             {
                 return await query.Where(expression).FirstOrDefaultAsync();
             }
@@ -249,19 +250,18 @@ namespace PustokMVC.Business.Implementations
                 {
                     book.CoverImageFile.CopyTo(fileStream);
                 }
-                if (CurrentBook.CoverImageFile is not null)
-                {
-                    List<BookImage> bookImage1 = await _context.BookImages.Where(bi => bi.IsCover == true).Where(bi => bi.BookId == CurrentBook.Id).ToListAsync();
 
-                    foreach (var _bookImage in bookImage1)
-                    {
-                        string path2 = Path.Combine(_env.WebRootPath, "uploads/sliders", _bookImage.ImageUrl);
-                        if (File.Exists(path2))
-                        {
-                            File.Delete(path2);
-                        }
-                        _context.BookImages.Remove(_bookImage);
-                    }
+                BookImage? coverImage = await _context.BookImages.Where(bi => bi.IsCover == true).Where(bi => bi.BookId == CurrentBook.Id).FirstOrDefaultAsync();
+                
+                if (coverImage is not null)
+                {
+                  string path2 = Path.Combine(_env.WebRootPath, "uploads/sliders", coverImage.ImageUrl);
+                   if (File.Exists(path2))
+                   {
+                      File.Delete(path2);
+                   }
+                   _context.BookImages.Remove(coverImage);
+                    
                 }
                 BookImage bookImage = new BookImage()
                 {
@@ -269,6 +269,7 @@ namespace PustokMVC.Business.Implementations
                     ImageUrl=fileName,
                     IsCover=true,
                     IsActivated=true,
+                    CreatedDate = DateTime.UtcNow.AddHours(4),
                 };          
                 await _context.BookImages.AddAsync(bookImage);        
             }
@@ -296,18 +297,15 @@ namespace PustokMVC.Business.Implementations
                     book.HoverImageFile.CopyTo(fileStream);
                 }
 
-                if (CurrentBook.HoverImageFile is not null)
+                 BookImage? hoverImage = await _context.BookImages.Where(bi => bi.IsCover == false).Where(bi => bi.BookId == CurrentBook.Id).FirstOrDefaultAsync();
+                if (hoverImage is not null)
                 {
-                    List<BookImage> bookImage1 = await _context.BookImages.Where(bi => bi.IsCover == false).Where(bi => bi.BookId == CurrentBook.Id).ToListAsync();
-                    foreach (var _bookImage in bookImage1)
-                    {
-                        string path2 = Path.Combine(_env.WebRootPath, "uploads/sliders", _bookImage.ImageUrl);
+                        string path2 = Path.Combine(_env.WebRootPath, "uploads/sliders", hoverImage.ImageUrl);
                         if (File.Exists(path2))
                         {
                             File.Delete(path2);
                         }
-                        _context.BookImages.Remove(_bookImage);
-                    }
+                        _context.BookImages.Remove(hoverImage);                   
                 }
 
                 BookImage bookImage = new BookImage()
@@ -316,10 +314,23 @@ namespace PustokMVC.Business.Implementations
                     ImageUrl = fileName,
                     IsCover = false,
                     IsActivated = true,
+                    CreatedDate = DateTime.UtcNow.AddHours(4),
                 };
                 
                 await _context.BookImages.AddAsync(bookImage);               
             }
+
+            foreach (var ImageFile in CurrentBook.BookImages.Where(bi => !book.BookImageIds.Contains(bi.Id) && bi.IsCover == null))
+            {
+                string path2 = Path.Combine(_env.WebRootPath, "uploads/sliders", ImageFile.ImageUrl);
+                if (File.Exists(path2))
+                {
+                    File.Delete(path2);
+                }                
+            }
+            
+            CurrentBook.BookImages.RemoveAll(bi => !book.BookImageIds.Contains(bi.Id) && bi.IsCover==null);
+
             if (book.ImageFiles is not null)
             {
                 foreach (var ImageFile in book.ImageFiles)
@@ -344,28 +355,18 @@ namespace PustokMVC.Business.Implementations
                     using (FileStream fileStream = new FileStream(path, FileMode.Create))
                     {
                         ImageFile.CopyTo(fileStream);
-                    }
-                    if (CurrentBook.ImageFiles is not null)
-                    {                       
-                            List<BookImage> bookImage1 = await _context.BookImages.Where(bi => bi.IsCover == null).Where(bi => bi.BookId == CurrentBook.Id).ToListAsync();
-                            foreach (var _bookImage in bookImage1)
-                            {
-                                string path2 = Path.Combine(_env.WebRootPath, "uploads/sliders", _bookImage.ImageUrl);
-                                if (File.Exists(path2))
-                                {
-                                    File.Delete(path2);
-                                }
-                                _context.BookImages.Remove(_bookImage);
-                            }                       
-                    }
+                    }           
+                    
                     BookImage bookImage = new BookImage()
                     {
                         Book = book,
                         ImageUrl = fileName,
                         IsCover = null,
+                        IsActivated = true,
+                        CreatedDate = DateTime.UtcNow.AddHours(4),
                     };
                     
-                    await _context.BookImages.AddAsync(bookImage);
+                     _context.BookImages.Add(bookImage);
                 }
 
             }
@@ -374,27 +375,11 @@ namespace PustokMVC.Business.Implementations
             CurrentBook.Desc = book.Desc;
             CurrentBook.CostPrice = book.CostPrice;
             CurrentBook.SellPrice = book.SellPrice;
-            if (book.CoverImageFile is not null)
-            {
-                CurrentBook.CoverImageFile = book.CoverImageFile;
-            }
-            if (book.HoverImageFile is not null)
-            {
-                CurrentBook.HoverImageFile = book.HoverImageFile;
-
-            }
-            if (book.ImageFiles is not null)
-            {
-                CurrentBook.ImageFiles = book.ImageFiles;
-
-            }
             CurrentBook.Discount = book.Discount;
-            CurrentBook.Author = book.Author;
             CurrentBook.AuthorId = book.AuthorId;
             CurrentBook.IsFeatured = book.IsFeatured;
             CurrentBook.MostView = book.MostView;
             CurrentBook.BookImages = book.BookImages;
-            CurrentBook.Genre = book.Genre;
             CurrentBook.GenreId = book.GenreId;
             CurrentBook.IsNew = book.IsNew;
             CurrentBook.IsActivated = book.IsActivated;

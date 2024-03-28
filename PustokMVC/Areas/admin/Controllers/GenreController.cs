@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PustokMVC.Business.Interfaces;
 using PustokMVC.CustomExceptions.Common;
 using PustokMVC.Models;
@@ -6,6 +7,7 @@ using PustokMVC.Models;
 namespace PustokMVC.Areas.admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class GenreController : Controller
     {
         private readonly IGenreService _genreService;   
@@ -24,6 +26,7 @@ namespace PustokMVC.Areas.admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task <IActionResult> Create(Genre genre)
         {
             if (!ModelState.IsValid)
@@ -53,6 +56,7 @@ namespace PustokMVC.Areas.admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task <IActionResult> Update(Genre genre)
         {
             if (!ModelState.IsValid)
@@ -75,6 +79,7 @@ namespace PustokMVC.Areas.admin.Controllers
             }
             return RedirectToAction("index");
         }
+        [Authorize(Roles = "SuperAdmin")]
         public async Task <IActionResult> Delete(int id)
         {
             try

@@ -3872,12 +3872,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\PustokMVC.bundle.scp.css))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\046c1807-5871-4d0c-967f-02213313afb1product-1.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\03bff50f-dcde-4705-85d7-0ff2b0a2e48bproduct-4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/046c1807-5871-4d0c-967f-02213313afb1product-1.jpg</RelativePath>
+      <RelativePath>Uploads/Books/03bff50f-dcde-4705-85d7-0ff2b0a2e48bproduct-4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -3886,14 +3886,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\046c1807-5871-4d0c-967f-02213313afb1product-1.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\03bff50f-dcde-4705-85d7-0ff2b0a2e48bproduct-4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\081dee7c-59fe-4d02-87bf-0bde1d8b2085product-1.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\2023412e-d0fe-454e-afb3-88489c32c095product-11.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/081dee7c-59fe-4d02-87bf-0bde1d8b2085product-1.jpg</RelativePath>
+      <RelativePath>Uploads/Books/2023412e-d0fe-454e-afb3-88489c32c095product-11.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -3902,23 +3902,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\081dee7c-59fe-4d02-87bf-0bde1d8b2085product-1.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\10a2010d-b8a4-4e34-ab4e-d4e6964b5a48product-2.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/10a2010d-b8a4-4e34-ab4e-d4e6964b5a48product-2.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\10a2010d-b8a4-4e34-ab4e-d4e6964b5a48product-2.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\2023412e-d0fe-454e-afb3-88489c32c095product-11.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\28a00fab-dedf-4500-a318-d258a7cfa6f0product-13.jpg))">
       <SourceType>Package</SourceType>
@@ -3936,12 +3920,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\28a00fab-dedf-4500-a318-d258a7cfa6f0product-13.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\2d96d01d-f777-4c18-84d4-1e2a5af0a867product-1.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\2a66642c-c99b-4fd8-ac1f-618fe0de4098product-4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/2d96d01d-f777-4c18-84d4-1e2a5af0a867product-1.jpg</RelativePath>
+      <RelativePath>Uploads/Books/2a66642c-c99b-4fd8-ac1f-618fe0de4098product-4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -3950,23 +3934,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\2d96d01d-f777-4c18-84d4-1e2a5af0a867product-1.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\2eed242e-cc6d-4713-af0b-c030115b349aproduct-1.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/2eed242e-cc6d-4713-af0b-c030115b349aproduct-1.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\2eed242e-cc6d-4713-af0b-c030115b349aproduct-1.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\2a66642c-c99b-4fd8-ac1f-618fe0de4098product-4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\3738b506-0e9a-48ce-817c-f425ab681ad5product-details-2.jpg))">
       <SourceType>Package</SourceType>
@@ -3984,12 +3952,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\3738b506-0e9a-48ce-817c-f425ab681ad5product-details-2.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\4843ea09-2c28-4cbc-9b1d-7695e8ca8a36cart-product-1.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\3cc9d64c-8553-42e2-bf56-d6c2429beeffproduct-9.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/4843ea09-2c28-4cbc-9b1d-7695e8ca8a36cart-product-1.jpg</RelativePath>
+      <RelativePath>Uploads/Books/3cc9d64c-8553-42e2-bf56-d6c2429beeffproduct-9.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -3998,7 +3966,87 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\4843ea09-2c28-4cbc-9b1d-7695e8ca8a36cart-product-1.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\3cc9d64c-8553-42e2-bf56-d6c2429beeffproduct-9.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\3e9a0ccc-32e5-4773-ac30-ec3357b53993aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>PustokMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PustokMVC</BasePath>
+      <RelativePath>Uploads/Books/3e9a0ccc-32e5-4773-ac30-ec3357b53993aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\3e9a0ccc-32e5-4773-ac30-ec3357b53993aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\3efee29a-52a7-4cff-9169-2c541f78fa88product-12.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>PustokMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PustokMVC</BasePath>
+      <RelativePath>Uploads/Books/3efee29a-52a7-4cff-9169-2c541f78fa88product-12.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\3efee29a-52a7-4cff-9169-2c541f78fa88product-12.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\50d76e6f-624e-4de0-afa1-5b79653c24a7product-4.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>PustokMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PustokMVC</BasePath>
+      <RelativePath>Uploads/Books/50d76e6f-624e-4de0-afa1-5b79653c24a7product-4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\50d76e6f-624e-4de0-afa1-5b79653c24a7product-4.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\563a6804-15c3-48c1-9f40-eeed94acb453product-11.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>PustokMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PustokMVC</BasePath>
+      <RelativePath>Uploads/Books/563a6804-15c3-48c1-9f40-eeed94acb453product-11.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\563a6804-15c3-48c1-9f40-eeed94acb453product-11.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\640bc453-8083-4d1c-8c62-28b65098b640product-4.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>PustokMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PustokMVC</BasePath>
+      <RelativePath>Uploads/Books/640bc453-8083-4d1c-8c62-28b65098b640product-4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\640bc453-8083-4d1c-8c62-28b65098b640product-4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\64e36780-e490-47b5-a1a1-f35be7693567cart-product-1.jpg))">
       <SourceType>Package</SourceType>
@@ -4016,12 +4064,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\64e36780-e490-47b5-a1a1-f35be7693567cart-product-1.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\6a8beb5e-f2e4-45d7-a56e-e1c7f953339dproduct-2.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\6efb4ba1-af18-4d27-8f9b-efc04b049a28product-12.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/6a8beb5e-f2e4-45d7-a56e-e1c7f953339dproduct-2.jpg</RelativePath>
+      <RelativePath>Uploads/Books/6efb4ba1-af18-4d27-8f9b-efc04b049a28product-12.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4030,14 +4078,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\6a8beb5e-f2e4-45d7-a56e-e1c7f953339dproduct-2.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\6efb4ba1-af18-4d27-8f9b-efc04b049a28product-12.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\6c591bf2-810d-4be1-91c1-5bc883325109product-1.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\778aa61d-43f1-4d48-aeb5-0473c9009091product-13.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/6c591bf2-810d-4be1-91c1-5bc883325109product-1.jpg</RelativePath>
+      <RelativePath>Uploads/Books/778aa61d-43f1-4d48-aeb5-0473c9009091product-13.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4046,14 +4094,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\6c591bf2-810d-4be1-91c1-5bc883325109product-1.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\778aa61d-43f1-4d48-aeb5-0473c9009091product-13.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\6eb8c50e-d268-4638-83e2-a71a0dd9b8fcproduct-2.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\7b9e9be2-cba7-46dd-b4c4-da7f376999a5product-4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/6eb8c50e-d268-4638-83e2-a71a0dd9b8fcproduct-2.jpg</RelativePath>
+      <RelativePath>Uploads/Books/7b9e9be2-cba7-46dd-b4c4-da7f376999a5product-4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4062,135 +4110,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\6eb8c50e-d268-4638-83e2-a71a0dd9b8fcproduct-2.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\702cb1ac-5b0b-415e-9f23-e3e0a8745c05product-1.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/702cb1ac-5b0b-415e-9f23-e3e0a8745c05product-1.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\702cb1ac-5b0b-415e-9f23-e3e0a8745c05product-1.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\71bf7ad8-f397-4a55-bd7f-3299bed45a3eproduct-1.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/71bf7ad8-f397-4a55-bd7f-3299bed45a3eproduct-1.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\71bf7ad8-f397-4a55-bd7f-3299bed45a3eproduct-1.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\7584c7bc-d3c3-411d-98f1-5bf0f406ffb8product-details-2.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/7584c7bc-d3c3-411d-98f1-5bf0f406ffb8product-details-2.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\7584c7bc-d3c3-411d-98f1-5bf0f406ffb8product-details-2.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\7c7a80e2-134e-40c5-ae7d-af4eebe96ae2product-1.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/7c7a80e2-134e-40c5-ae7d-af4eebe96ae2product-1.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\7c7a80e2-134e-40c5-ae7d-af4eebe96ae2product-1.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\7d74823e-bbe9-4fa2-8658-019bde7ff10dproduct-3.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/7d74823e-bbe9-4fa2-8658-019bde7ff10dproduct-3.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\7d74823e-bbe9-4fa2-8658-019bde7ff10dproduct-3.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\7f03a37a-29c0-42d3-91a2-066adfeca206product-1.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/7f03a37a-29c0-42d3-91a2-066adfeca206product-1.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\7f03a37a-29c0-42d3-91a2-066adfeca206product-1.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\829689fd-61cb-4fd6-b48a-55bb87bf3939product-1.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/829689fd-61cb-4fd6-b48a-55bb87bf3939product-1.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\829689fd-61cb-4fd6-b48a-55bb87bf3939product-1.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\857e7c39-e4df-497e-8181-aab4ab9bd95eproduct-2.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/857e7c39-e4df-497e-8181-aab4ab9bd95eproduct-2.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\857e7c39-e4df-497e-8181-aab4ab9bd95eproduct-2.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\7b9e9be2-cba7-46dd-b4c4-da7f376999a5product-4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\8a7dc754-27d3-48a0-8638-d76c8973835dproduct-8.jpg))">
       <SourceType>Package</SourceType>
@@ -4208,12 +4128,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\8a7dc754-27d3-48a0-8638-d76c8973835dproduct-8.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\8e649708-dc32-41a5-a311-06426e906c64product-10.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\91a77080-9665-463d-bd4a-902778623460product-4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/8e649708-dc32-41a5-a311-06426e906c64product-10.jpg</RelativePath>
+      <RelativePath>Uploads/Books/91a77080-9665-463d-bd4a-902778623460product-4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4222,23 +4142,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\8e649708-dc32-41a5-a311-06426e906c64product-10.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\93619841-260f-4224-ae39-1210f9ce4ee0product-1.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/93619841-260f-4224-ae39-1210f9ce4ee0product-1.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\93619841-260f-4224-ae39-1210f9ce4ee0product-1.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\91a77080-9665-463d-bd4a-902778623460product-4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\95f71de1-05d2-4fa3-a6c4-427e83fd799cproduct-8.jpg))">
       <SourceType>Package</SourceType>
@@ -4256,12 +4160,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\95f71de1-05d2-4fa3-a6c4-427e83fd799cproduct-8.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\96632116-0aec-4275-8914-6eb8a48281bdproduct-9.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\b75e3ae5-edca-4717-9915-7939d919293fproduct-4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/96632116-0aec-4275-8914-6eb8a48281bdproduct-9.jpg</RelativePath>
+      <RelativePath>Uploads/Books/b75e3ae5-edca-4717-9915-7939d919293fproduct-4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4270,14 +4174,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\96632116-0aec-4275-8914-6eb8a48281bdproduct-9.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\b75e3ae5-edca-4717-9915-7939d919293fproduct-4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\9b6026d3-44a7-42ad-acb3-f7e8315dd7feproduct-2.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\be4dc568-5ff2-45df-9e81-a96150d16d95product-4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/9b6026d3-44a7-42ad-acb3-f7e8315dd7feproduct-2.jpg</RelativePath>
+      <RelativePath>Uploads/Books/be4dc568-5ff2-45df-9e81-a96150d16d95product-4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4286,14 +4190,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\9b6026d3-44a7-42ad-acb3-f7e8315dd7feproduct-2.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\be4dc568-5ff2-45df-9e81-a96150d16d95product-4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\9fd80aed-0be7-4346-8cbb-aca7c1c907abproduct-1.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\bfba78d5-c6b9-4055-873a-575eec095e14product-4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/9fd80aed-0be7-4346-8cbb-aca7c1c907abproduct-1.jpg</RelativePath>
+      <RelativePath>Uploads/Books/bfba78d5-c6b9-4055-873a-575eec095e14product-4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4302,14 +4206,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\9fd80aed-0be7-4346-8cbb-aca7c1c907abproduct-1.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\bfba78d5-c6b9-4055-873a-575eec095e14product-4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\a2464169-5722-4bee-9c80-5ed7ec4657f8product-2.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\c3db1578-57fa-475d-9bfa-947369ac9f17product-details-5.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/a2464169-5722-4bee-9c80-5ed7ec4657f8product-2.jpg</RelativePath>
+      <RelativePath>Uploads/Books/c3db1578-57fa-475d-9bfa-947369ac9f17product-details-5.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4318,14 +4222,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\a2464169-5722-4bee-9c80-5ed7ec4657f8product-2.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\c3db1578-57fa-475d-9bfa-947369ac9f17product-details-5.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\a8547a03-2d7f-4d52-9ba5-06c267c4649bproduct-6.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\c7e21fd4-0550-44c5-84a2-fd79d0c98ca5product-4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/a8547a03-2d7f-4d52-9ba5-06c267c4649bproduct-6.jpg</RelativePath>
+      <RelativePath>Uploads/Books/c7e21fd4-0550-44c5-84a2-fd79d0c98ca5product-4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4334,14 +4238,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\a8547a03-2d7f-4d52-9ba5-06c267c4649bproduct-6.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\c7e21fd4-0550-44c5-84a2-fd79d0c98ca5product-4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\ad026893-b586-43bb-8fdb-9fb2f4383c55product-1.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\d408c767-9dc5-48d0-a4d9-80c06f9b6ae2product-10.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/ad026893-b586-43bb-8fdb-9fb2f4383c55product-1.jpg</RelativePath>
+      <RelativePath>Uploads/Books/d408c767-9dc5-48d0-a4d9-80c06f9b6ae2product-10.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4350,14 +4254,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\ad026893-b586-43bb-8fdb-9fb2f4383c55product-1.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\d408c767-9dc5-48d0-a4d9-80c06f9b6ae2product-10.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\baa528ad-68d7-47ce-98a7-a3100f5c478fproduct-1.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\d94c5fae-24bd-43ec-974f-547f4c66bbddproduct-9.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/baa528ad-68d7-47ce-98a7-a3100f5c478fproduct-1.jpg</RelativePath>
+      <RelativePath>Uploads/Books/d94c5fae-24bd-43ec-974f-547f4c66bbddproduct-9.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4366,14 +4270,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\baa528ad-68d7-47ce-98a7-a3100f5c478fproduct-1.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\d94c5fae-24bd-43ec-974f-547f4c66bbddproduct-9.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\c7816a19-914e-47cd-974f-745087e4b960product-2.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\e0d35faf-e1d0-4575-be46-fea2751ee69cproduct-details-4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/c7816a19-914e-47cd-974f-745087e4b960product-2.jpg</RelativePath>
+      <RelativePath>Uploads/Books/e0d35faf-e1d0-4575-be46-fea2751ee69cproduct-details-4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4382,14 +4286,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\c7816a19-914e-47cd-974f-745087e4b960product-2.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\e0d35faf-e1d0-4575-be46-fea2751ee69cproduct-details-4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\ccccc55b-b153-4a54-8643-20d78d2e6c59product-1.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\e37e662f-c79a-4d0b-81b1-7bd0c139b472product-5.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/ccccc55b-b153-4a54-8643-20d78d2e6c59product-1.jpg</RelativePath>
+      <RelativePath>Uploads/Books/e37e662f-c79a-4d0b-81b1-7bd0c139b472product-5.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4398,14 +4302,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\ccccc55b-b153-4a54-8643-20d78d2e6c59product-1.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\e37e662f-c79a-4d0b-81b1-7bd0c139b472product-5.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\d6331897-0ee5-4578-a46d-90d5eaa1f0a3product-6.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\f0863d0d-657c-4fb6-86c6-9c0ed821ec12product-4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/d6331897-0ee5-4578-a46d-90d5eaa1f0a3product-6.jpg</RelativePath>
+      <RelativePath>Uploads/Books/f0863d0d-657c-4fb6-86c6-9c0ed821ec12product-4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4414,14 +4318,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\d6331897-0ee5-4578-a46d-90d5eaa1f0a3product-6.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\f0863d0d-657c-4fb6-86c6-9c0ed821ec12product-4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\da02dcb2-a6d3-4094-9b8f-4a33f3e03320product-details-2.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\f7faa1d7-2aad-4209-98db-27ad556cc5ebproduct-details-4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/da02dcb2-a6d3-4094-9b8f-4a33f3e03320product-details-2.jpg</RelativePath>
+      <RelativePath>Uploads/Books/f7faa1d7-2aad-4209-98db-27ad556cc5ebproduct-details-4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4430,14 +4334,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\da02dcb2-a6d3-4094-9b8f-4a33f3e03320product-details-2.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\f7faa1d7-2aad-4209-98db-27ad556cc5ebproduct-details-4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\e4e31175-9dfa-412b-b07c-28bba026c962product-10.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\fab735b2-b0ce-4c66-829f-e1c1f0a4b7bbproduct-4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PustokMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/e4e31175-9dfa-412b-b07c-28bba026c962product-10.jpg</RelativePath>
+      <RelativePath>Uploads/Books/fab735b2-b0ce-4c66-829f-e1c1f0a4b7bbproduct-4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -4446,55 +4350,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\e4e31175-9dfa-412b-b07c-28bba026c962product-10.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\e510c6c1-1253-4f03-aa36-f60b42f5e5deproduct-2.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/e510c6c1-1253-4f03-aa36-f60b42f5e5deproduct-2.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\e510c6c1-1253-4f03-aa36-f60b42f5e5deproduct-2.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\f409022f-38db-4147-b025-f7e8cac9062cproduct-1.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/f409022f-38db-4147-b025-f7e8cac9062cproduct-1.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\f409022f-38db-4147-b025-f7e8cac9062cproduct-1.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\f6030ff0-78a9-4162-af74-811e7c5deb4aproduct-10.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Books/f6030ff0-78a9-4162-af74-811e7c5deb4aproduct-10.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\f6030ff0-78a9-4162-af74-811e7c5deb4aproduct-10.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Books\fab735b2-b0ce-4c66-829f-e1c1f0a4b7bbproduct-4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Sliders\078ee942-c0e9-42f5-86b4-e8db8767b3b1product-details-4.jpg))">
       <SourceType>Package</SourceType>
@@ -4671,22 +4527,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Sliders\8a7dc754-27d3-48a0-8638-d76c8973835dproduct-8.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Sliders\95f71de1-05d2-4fa3-a6c4-427e83fd799cproduct-8.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>PustokMVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/PustokMVC</BasePath>
-      <RelativePath>Uploads/Sliders/95f71de1-05d2-4fa3-a6c4-427e83fd799cproduct-8.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Sliders\95f71de1-05d2-4fa3-a6c4-427e83fd799cproduct-8.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Sliders\a66e2403-6beb-4d44-8f14-1ccb7a734d9fproduct-details-4.jpg))">
       <SourceType>Package</SourceType>

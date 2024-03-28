@@ -1,0 +1,56 @@
+﻿@model RegisterViewModel
+		<!--=============================================
+		=            Login Register page content         =
+		=============================================-->
+		<main class="page-section inner-page-sec-padding-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb--30 mb-lg--0">
+						<!-- Login Form s-->
+						<form method="post">
+							<div class="login-form">
+								<h4 class="login-title">New Customer</h4>
+								<p><span class="font-weight-bold">I am a new customer</span></p>
+								<div class="row">
+									<div class="col-md-12 col-12 mb--15">
+										<label for="email">Full Name</label>
+										<input class="mb-0 form-control" asp-for="FullName" id="name"
+											   placeholder="Enter your full name">
+									</div>
+									<div class="col-md-12 col-12 mb--15">
+										<label for="email">Username</label>
+										<input class="mb-0 form-control" asp-for="UserName" id="name"
+											   placeholder="Enter your username">
+										<span asp-validation-for="UserName" class="text-danger"></span>
+									</div>
+									<div class="col-12 mb--20">
+										<label for="email">Email</label>
+										<input class="mb-0 form-control" asp-for="Email" id="email" placeholder="Enter Your Email Address Here..">
+										<span asp-validation-for="Email" class="text-danger"></span>
+									</div>
+									<div class="col-12 mb--20">
+										<label for="email">Phone Number</label>
+										<input class="mb-0 form-control" asp-for="PhoneNumber" id="email" placeholder="Enter Your Phone number Here..">
+										<span asp-validation-for="PhoneNumber" class="text-danger"></span>
+									</div>
+									<div class="col-lg-6 mb--20">
+										<label for="password">Password</label>
+										<input class="mb-0 form-control" asp-for="Password" id="password" placeholder="Enter your password">
+										<span asp-validation-for="Password" class="text-danger"></span>
+									</div>
+									<div class="col-lg-6 mb--20">
+										<label for="password">Repeat Password</label>
+										<input class="mb-0 form-control" asp-for="PasswordConfirmed" id="repeat-password" placeholder="Repeat your password">
+										<span asp-validation-for="PasswordConfirmed" class="text-danger"></span>
+									</div>
+									<div class="col-md-12">
+										<button type="submit" class="btn btn-outlined">Register</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+	

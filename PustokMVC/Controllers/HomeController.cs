@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PustokMVC.DAL;
@@ -6,6 +7,7 @@ using System.Diagnostics;
 
 namespace PustokMVC.Controllers
 {
+    [Authorize(Roles = "Member,Admin,SuperAdmin")]
     public class HomeController : Controller
     {
         private readonly PustokDbContext _context;

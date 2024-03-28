@@ -67,16 +67,32 @@
             <input asp-for="CoverImageFile" class="form-control" aria-describedby="emailHelp">
             <span asp-validation-for="CoverImageFile" class="text-danger"></span>
         </div>
+        <div>          
+            <img style="width:200px" src="~/uploads/books/ @Model.BookImages.FirstOrDefault(bi => bi.IsCover == true)?.ImageUrl" />
+        </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">HoverImageFile</label>
             <input asp-for="HoverImageFile" class="form-control" aria-describedby="emailHelp">
             <span asp-validation-for="HoverImageFile" class="text-danger"></span>
+        </div>
+        <div>
+            <img style="width:200px"  src="~/uploads/books/@Model.BookImages.FirstOrDefault(bi=>bi.IsCover==false)?.ImageUrl" />
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">ImageFiles</label>
             <input asp-for="ImageFiles" class="form-control" aria-describedby="emailHelp">
             <span asp-validation-for="ImageFiles" class="text-danger"></span>
         </div>
+        <div class="row">
+            @foreach (var bi in Model.BookImages.Where(bi=>bi.IsCover==null))
+            {
+                <div class="col-md-2">
+                    <img style="width:200px"  src="~/uploads/books/@bi?.ImageUrl" />
+                    <input asp-for="BookImageIds" value="@bi?.Id" />
+                </div>
+            }
+        </div>
+        <br />
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>

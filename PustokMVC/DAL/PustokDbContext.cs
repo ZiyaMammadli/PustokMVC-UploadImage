@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using PustokMVC.Models;
 
 namespace PustokMVC.DAL
 {
-    public class PustokDbContext: DbContext
+    public class PustokDbContext: IdentityDbContext<AppUser>
     {
         public PustokDbContext(DbContextOptions <PustokDbContext>option):base(option) { }
 
@@ -12,6 +13,6 @@ namespace PustokMVC.DAL
         public DbSet<Genre> Genres { get; set; }
         public DbSet<BookImage> BookImages { get; set; }
         public DbSet<Author> Authors { get; set; }   
-
+        public DbSet<AppUser> AppUsers { get; set; }
     }
 }

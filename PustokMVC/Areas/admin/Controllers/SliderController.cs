@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PustokMVC.Business.Interfaces;
 using PustokMVC.CustomExceptions.Common;
@@ -8,6 +9,7 @@ using PustokMVC.Models;
 namespace PustokMVC.Areas.admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class SliderController : Controller
     {
         private readonly ISliderService _sliderService;
@@ -26,6 +28,7 @@ namespace PustokMVC.Areas.admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult>Create(Slider slider)
         {
             if(!ModelState.IsValid)
@@ -57,6 +60,7 @@ namespace PustokMVC.Areas.admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult>Update(Slider slider)
         {
             
@@ -92,6 +96,7 @@ namespace PustokMVC.Areas.admin.Controllers
             }
             return RedirectToAction("index");
         }
+        [Authorize(Roles = "SuperAdmin")]
         public async Task <IActionResult> Delete(int id)
         {
            await _sliderService.DeleteAsync(id);
