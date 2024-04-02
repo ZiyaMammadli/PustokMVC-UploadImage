@@ -4,6 +4,7 @@ using PustokMVC.CustomExceptions.BookExceptions;
 using PustokMVC.CustomExceptions.Common;
 using PustokMVC.DAL;
 using PustokMVC.Models;
+using System.Globalization;
 using System.Linq.Expressions;
 
 namespace PustokMVC.Business.Implementations
@@ -197,6 +198,8 @@ namespace PustokMVC.Business.Implementations
             }
         }
 
+        
+
         public async Task<Book> GetByIdAsync(int id)
         {
             Book book= await _context.Books.FindAsync(id);
@@ -388,13 +391,13 @@ namespace PustokMVC.Business.Implementations
             
             await _context.SaveChangesAsync();
         }
-        private IQueryable<Book> _GetInclude(IQueryable<Book> query,params string[] includes)
+        private IQueryable<Book> _GetInclude(IQueryable<Book> query, params string[] includes)
         {
-            if(includes is not null)
+            if (includes is not null)
             {
-               foreach(var include in includes)
+                foreach (var include in includes)
                 {
-                    query=query.Include(include);   
+                    query = query.Include(include);
                 }
             }
             return query;

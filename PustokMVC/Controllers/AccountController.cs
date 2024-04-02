@@ -10,7 +10,6 @@ using PustokMVC.ViewModels;
 
 namespace PustokMVC.Controllers
 {
-    
     public class AccountController : Controller
     {
         private readonly UserManager <AppUser> _userManager;
@@ -99,7 +98,7 @@ namespace PustokMVC.Controllers
             {
                 return View();
             }
-            AppUser member = null;
+            AppUser? member = null;
 
             member=await _userManager.FindByNameAsync(MemberLoginVM.UserName);
 
@@ -124,6 +123,73 @@ namespace PustokMVC.Controllers
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("login");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel ForgotPasswordVM)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            var user=await _userManager.FindByEmailAsync(ForgotPasswordVM.Email);
+
+            if(user is not null)
+            {
+                var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+                var resetTokenLink = Url.Action("ResetPassword", "Account", new { email = ForgotPasswordVM.Email, token = token }, Request.Scheme);
+
+                //email services...
+
+                return View("confirmPage");
+            }
+            else
+            {
+                ModelState.AddModelError("Email", "Email Not Found");
+                return View();
+            }
+           
+        }
+        public IActionResult ResetPassword(string email,string token)
+        {
+            if(email is null || token is null)
+            {
+                return NotFound();
+            }
+            return View();  
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task <IActionResult> ResetPassword(ResetPasswordViewModel resetPasswordVM)
+        {
+            if (!ModelState.IsValid) return View();
+
+            var user =await _userManager.FindByEmailAsync(resetPasswordVM.Email);
+            if (user is not null)
+            {
+                var result = await _userManager.ResetPasswordAsync(user, resetPasswordVM.Token, resetPasswordVM.NewPassword);
+                if (!result.Succeeded)
+                {
+                    foreach (var err in result.Errors)
+                    {
+                        ModelState.AddModelError("", err.Description);
+                        return View();
+                    }
+                }
+            }
+            else
+            {
+                return NotFound("Email not found");
+            }
+            return RedirectToAction("Login","Account");
+            
         }
     }
 }

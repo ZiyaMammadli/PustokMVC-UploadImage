@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace PustokMVC.Controllers
 {
-    [Authorize(Roles = "Member,Admin,SuperAdmin")]
+    
     public class HomeController : Controller
     {
         private readonly PustokDbContext _context;
