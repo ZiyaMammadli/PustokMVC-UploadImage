@@ -917,6 +917,10 @@
       "PackagePath": "staticwebassets\\assets\\image\\products\\product-details-5.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\PustokMVC\\PustokMVC\\wwwroot\\assets\\js\\Main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\Main.js"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\PustokMVC\\PustokMVC\\wwwroot\\assets\\js\\ajax-mail.js",
       "PackagePath": "staticwebassets\\assets\\js\\ajax-mail.js"
     },

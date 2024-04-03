@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "H9s0jvuT98COxx+mAAUw71K91iACmEpC67LTQQzXXEA=",
+  "Hash": "NG9VrWF/IENMTjVr3711OhS+u7tlmbbOpG3Vl1AIDQE=",
   "Source": "PustokMVC",
   "BasePath": "_content/PustokMVC",
   "Mode": "Default",
@@ -3530,6 +3530,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\custom.js"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\PustokMVC\\PustokMVC\\wwwroot\\assets\\js\\Main.js",
+      "SourceId": "PustokMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\PustokMVC\\PustokMVC\\wwwroot\\",
+      "BasePath": "_content/PustokMVC",
+      "RelativePath": "assets/js/Main.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\Main.js"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\PustokMVC\\PustokMVC\\wwwroot\\assets\\js\\plugins.js",

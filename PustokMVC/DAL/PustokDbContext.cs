@@ -14,5 +14,6 @@ namespace PustokMVC.DAL
         public DbSet<BookImage> BookImages { get; set; }
         public DbSet<Author> Authors { get; set; }   
         public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
     }
 }

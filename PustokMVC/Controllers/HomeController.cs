@@ -21,6 +21,7 @@ namespace PustokMVC.Controllers
             HomeViewModel homeViewModel = new HomeViewModel()
             {
                 Sliders= await _context.Sliders.ToListAsync(),
+                Books= await _context.Books.Include(b=>b.Author).Include(b=>b.BookImages).Include(b=>b.Genre).ToListAsync(),
             };
             return View(homeViewModel);
         }

@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using PustokMVC.DAL;
+using PustokMVC.Models;
 using PustokMVC.ViewModels;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace PustokMVC.Controllers
@@ -10,10 +13,12 @@ namespace PustokMVC.Controllers
     public class ShopController : Controller
     {
         private readonly PustokDbContext _context;
+        private readonly UserManager<AppUser> _userManager;
 
-        public ShopController(PustokDbContext pustokDbContext)
+        public ShopController(PustokDbContext pustokDbContext,UserManager<AppUser> userManager)
         {
             _context = pustokDbContext;
+            _userManager = userManager;
         }
         public IActionResult Index()
         {
@@ -26,44 +31,72 @@ namespace PustokMVC.Controllers
 
             List<BasketViewModel> basketVMs = new List<BasketViewModel>();
             BasketViewModel basketVM = null;
+            AppUser appUser = null;
            var basketVMstr= HttpContext.Request.Cookies["basketVMs"];
 
-            if(basketVMstr is not null)
+            if(!HttpContext.User.Identity.IsAuthenticated)
             {
-                 basketVMs = JsonConvert.DeserializeObject<List<BasketViewModel>>(basketVMstr);
+				if (basketVMstr is not null)
+				{
+					basketVMs = JsonConvert.DeserializeObject<List<BasketViewModel>>(basketVMstr);
 
-                var basketViewM = basketVMs.FirstOrDefault(bvm => bvm.BookId == bookId);
+					var basketViewM = basketVMs.FirstOrDefault(bvm => bvm.BookId == bookId);
 
-                if(basketViewM is not null)
+					if (basketViewM is not null)
+					{
+						basketViewM.Count++;
+
+					}
+					else
+					{
+						basketVM = new BasketViewModel
+						{
+							BookId = bookId,
+							Count = 1
+						};
+						basketVMs.Add(basketVM);
+					}
+				}
+				else
+				{
+					basketVM = new BasketViewModel
+					{
+						BookId = bookId,
+						Count = 1
+					};
+					basketVMs.Add(basketVM);
+				}
+
+				var BasketVMstr = JsonConvert.SerializeObject(basketVMs);
+
+				HttpContext.Response.Cookies.Append("basketVMs", BasketVMstr);
+			}
+            else
+            {
+				string Username = HttpContext.User.Identity.Name;
+				appUser = await _userManager.FindByNameAsync(Username);
+                var basketItem=await _context.BasketItems.FirstOrDefaultAsync(bi=>bi.AppUserId==appUser.Id && bi.BookId==bookId);
+                if (basketItem is not null)
                 {
-                    basketViewM.Count++;
-                    
+                    basketItem.Count++;                   
                 }
                 else
                 {
-                    basketVM = new BasketViewModel
+                    BasketItem BasketItem = new BasketItem
                     {
-                        BookId = bookId,
-                        Count = 1
+                        AppUserId=appUser.Id,
+                        BookId=bookId,
+                        Count = 1,
+                        IsActivated=true,
+                        CreatedDate = DateTime.UtcNow,
+                        UpdatedDate = DateTime.UtcNow,
                     };
-                    basketVMs.Add(basketVM);
-                }              
+                    _context.BasketItems.Add(BasketItem);
+                }
             }
-            else
-            {
-                basketVM = new BasketViewModel
-                {
-                    BookId = bookId,
-                    Count = 1
-                };
-                basketVMs.Add(basketVM);
-            }
-
-            var BasketVMstr = JsonConvert.SerializeObject(basketVMs);
-
-            HttpContext.Response.Cookies.Append("basketVMs", BasketVMstr);
-
-            return RedirectToAction("index","home");
+            _context.SaveChanges();
+            
+            return Ok();
         }
 
         public IActionResult GetBasket()
@@ -108,6 +141,67 @@ namespace PustokMVC.Controllers
             HttpContext.Response.Cookies.Append("basketVMs", BasketVMstr);
 
             return RedirectToAction("index", "home");
+        }
+
+        public async Task <IActionResult> CheckOut()
+        {
+            List<CheckOutViewModel> checkOutVMs = new List<CheckOutViewModel>();
+            var basketVM = HttpContext.Request.Cookies["basketVMs"];
+            double TotalPrice = 0;
+            AppUser user = null;
+            if(!HttpContext.User.Identity.IsAuthenticated)
+            {
+				if (basketVM is not null)
+				{
+					var basketVMs = JsonConvert.DeserializeObject<List<BasketViewModel>>(basketVM);
+					foreach (var basketvm in basketVMs)
+					{
+						Book book = await _context.Books.Where(b => b.Id == basketvm.BookId).FirstOrDefaultAsync();
+						CheckOutViewModel checkOutVM = new CheckOutViewModel()
+						{
+							BookId = basketvm.BookId,
+							BookCount = basketvm.Count,
+							BookName = book.Name,
+							BookPrice = book.SellPrice * basketvm.Count,
+						};
+
+						TotalPrice += book.SellPrice * basketvm.Count;
+						checkOutVMs.Add(checkOutVM);
+					}
+				}
+			}
+            else
+            {
+                string Username = HttpContext.User.Identity.Name;
+                user=await _userManager.FindByNameAsync(Username);
+                if (user is not null) 
+                { 
+                    var basketItems=await _context.BasketItems.Where(bi => bi.AppUserId == user.Id).ToListAsync();
+                    if(basketItems is not null)
+                    {
+                        foreach (var basketItem in basketItems)
+                        {
+							Book book = await _context.Books.Where(b => b.Id == basketItem.BookId).FirstOrDefaultAsync();
+							CheckOutViewModel checkOutVM = new CheckOutViewModel()
+                             {
+                                 BookId=basketItem.BookId,
+                                 BookCount= basketItem.Count,
+                                 BookName=book.Name,
+                                 BookPrice=book.SellPrice * basketItem.Count,
+                             };
+
+							TotalPrice += book.SellPrice * basketItem.Count;
+							checkOutVMs.Add(checkOutVM);
+                        }
+                    }
+                }
+            }
+
+
+            ViewData["user"]=user;
+            ViewData["TotalPrice"] = TotalPrice;
+
+			return View(checkOutVMs);  
         }
     }
 }
